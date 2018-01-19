@@ -1,0 +1,31 @@
+@import '_variables';
+@import '../extends/_extends';
+
+// default button styling
+
+.de-btn {
+  @include background-hover($blue-500);
+  border-radius: 2px;
+  padding: 10px 25px;
+  display: inline-block;
+  border: none;
+  color: $white-500;
+  box-shadow: 0 0 8px 1px transparentize($grey-500, .6);
+  text-transform: uppercase;
+  
+  &:focus {
+    outline: none;
+  }
+  
+  &:active {
+    transform: scale(.99);
+  }
+  
+  &.btn-success {
+    @include background-hover($green-500);
+  }
+  
+  &.btn-alert {
+    @include background-hover($red-500);
+  }
+}

@@ -28,5 +28,13 @@
 	@extend %flex-column;
 }
 
+@mixin background-hover($base-col) {
+  background: $base-col;
+
+  &:hover {
+    background: lighten($base-col, 2%);
+  }
+}
+
 
 
