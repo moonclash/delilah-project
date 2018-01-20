@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/moonclash/delilah-project#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-autoprefixer": "4.1.0",
     "browser-sync": "^2.23.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "4.1.0",
     "gulp-babel": "^7.0.0",
+    "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0"
   }
 }

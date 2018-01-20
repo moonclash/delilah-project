@@ -8,9 +8,9 @@ const uglify = require('gulp-uglify');
 const fs = require('fs');
 
 gulp.task('sass', () =>  {
-  return gulp.src('src/styles/scss/*.scss')
+  return gulp.src('styling/**.scss')
   .pipe(sass())
-  .pipe(gulp.dest('src/styles/css'))
+  .pipe(gulp.dest('.'))
   .pipe(browserSync.reload({
     stream : true
   }))
@@ -18,21 +18,18 @@ gulp.task('sass', () =>  {
 
 
 gulp.task('autoprefixer',() => {
-  return gulp.src('src/styles/css/*.css')
+  return gulp.src('./*.css')
   .pipe(autoprefixer({
     browsers : ['last 5 versions'],
     cascade : false
   }))
-  .pipe(gulp.dest('src/styles/css'));
+  .pipe(gulp.dest('.'));
 });
 
 gulp.task('browserSync', () => {
   browserSync.init({
     server: {
-        baseDir: 'src',
-        socket: {
-            domain: 'dwellant.dev:8085'
-        }
+        baseDir: '.',
     },
   })
 });
@@ -63,8 +60,7 @@ gulp.task('uglify', () => {
 
 
 gulp.task('watch',['browserSync'], () =>  {
-  gulp.watch('src/styles/scss/*.scss',['sass']);
-  gulp.watch('src/styles/css/*.css',['autoprefixer']);
-  gulp.watch('src/*.html', browserSync.reload);
-  gulp.watch('src/scripts/*.js',['babelify','uglify',browserSync.reload]);
+  gulp.watch('styling/**.scss',['sass']);
+  gulp.watch('stylng/*.css',['autoprefixer']);
+  gulp.watch('*.html', browserSync.reload);
 });

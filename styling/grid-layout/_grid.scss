@@ -1,10 +1,8 @@
-@import '../extends/_extends';
-
 // responsive container defaulted to a 1200px max width
 .de-responsive-container {
     @include responsive-container(1200px); // rows for the container
     .de-row {
-        @extend flex-row;
+        @extend %flex-row;
         @include until(800px) {
         	flex-flow: column wrap;
         }

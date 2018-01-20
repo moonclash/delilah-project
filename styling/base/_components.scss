@@ -10,8 +10,9 @@
   display: inline-block;
   border: none;
   color: $white-500;
-  box-shadow: 0 0 8px 1px transparentize($grey-500, .6);
+  box-shadow: 0 0 8px 1px transparentize($grey-500, .7);
   text-transform: uppercase;
+ 
   
   &:focus {
     outline: none;
