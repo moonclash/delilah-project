@@ -453,7 +453,7 @@ input[type=text], input[type=email] {
   border: none;
   box-shadow: 0 0 0 1px #c3c3c7;
   transition: 500ms all ease;
-  padding: 2px 2px; }
+  padding: 7px 2px; }
   input[type=text]:focus, input[type=email]:focus {
     outline: none;
     transform: translateY(-10%);

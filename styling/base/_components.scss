@@ -35,7 +35,7 @@ input {
     border: none;
     box-shadow: 0 0 0 1px lighten($grey-500, 49%);
     transition: 500ms all ease;
-    padding: 2px 2px;
+    padding: 7px 2px;
     &:focus {
       outline: none;
       transform: translateY(-10%);
