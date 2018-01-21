@@ -36,5 +36,26 @@
   }
 }
 
+@mixin background-image($url) {
+  background: {
+    image: url($url);
+    size: cover;
+    position: center center;
+    repeat: no-repeat;
+  }
+}
+
+@mixin header($url) {
+  @include background-image($url);
+  height: 50vh;
+  text-align: center;
+  @extend %flex-column;
+  align-items: center;
+  justify-content: center;
+  .de-btn {
+    margin: 50px 0;
+  }
+}
+
 
 

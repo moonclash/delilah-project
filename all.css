@@ -397,7 +397,7 @@ html, body {
   font-family: "Open Sans";
   text-rendering: optimizeLegibility; }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a {
   margin: 5px;
   line-height: 1.4; }
 
@@ -417,7 +417,7 @@ h2 {
 h3 {
   font-size: 24px; }
 
-.de-responsive-container {
+.de-responsive-container, header {
   display: flex;
   flex-flow: column wrap; }
 
@@ -450,7 +450,6 @@ h3 {
       background: #d92020; }
 
 .de-table {
-  margin: 50px;
   box-shadow: 0 0 20px 1px rgba(69, 69, 75, 0.15);
   border-collapse: collapse; }
   .de-table tr {
@@ -463,7 +462,7 @@ h3 {
   .de-table tbody tr:nth-of-type(odd) {
     background: #fafafb; }
 
-.de-responsive-container {
+.de-responsive-container, header {
   display: flex;
   flex-flow: column wrap; }
 
@@ -474,32 +473,54 @@ h3 {
 .de-responsive-container {
   max-width: 1200px;
   margin: 0 auto; }
-  .de-responsive-container .de-row {
-    padding: 10px 16px; }
-    @media all and (max-width: 800px) {
-      .de-responsive-container .de-row {
-        flex-flow: column wrap; } }
-    .de-responsive-container .de-row .de-col-1 {
-      flex: 1 0 100%; }
-    .de-responsive-container .de-row .de-col-2 {
-      flex: 1 0 50%; }
-    .de-responsive-container .de-row .de-col-3 {
-      flex: 1 0 33.33333%; }
-    .de-responsive-container .de-row .de-col-4 {
-      flex: 1 0 25%; }
-    .de-responsive-container .de-row .de-col-5 {
-      flex: 1 0 20%; }
-    .de-responsive-container .de-row .de-col-6 {
-      flex: 1 0 16.66667%; }
-    .de-responsive-container .de-row .de-col-7 {
-      flex: 1 0 14.28571%; }
-    .de-responsive-container .de-row .de-col-8 {
-      flex: 1 0 12.5%; }
-    .de-responsive-container .de-row .de-col-9 {
-      flex: 1 0 11.11111%; }
-    .de-responsive-container .de-row .de-col-10 {
-      flex: 1 0 10%; }
-    .de-responsive-container .de-row .de-col-11 {
-      flex: 1 0 9.09091%; }
-    .de-responsive-container .de-row .de-col-12 {
-      flex: 1 0 8.33333%; }
+  @media all and (max-width: 800px) {
+    .de-responsive-container .de-row {
+      flex-flow: column wrap; } }
+  .de-responsive-container .de-row .de-col-1 {
+    flex: 1 0 100%;
+    padding: 10px 15px; }
+  .de-responsive-container .de-row .de-col-2 {
+    flex: 1 0 50%;
+    padding: 10px 15px; }
+  .de-responsive-container .de-row .de-col-3 {
+    flex: 1 0 33.33333%;
+    padding: 10px 15px; }
+  .de-responsive-container .de-row .de-col-4 {
+    flex: 1 0 25%;
+    padding: 10px 15px; }
+  .de-responsive-container .de-row .de-col-5 {
+    flex: 1 0 20%;
+    padding: 10px 15px; }
+  .de-responsive-container .de-row .de-col-6 {
+    flex: 1 0 16.66667%;
+    padding: 10px 15px; }
+  .de-responsive-container .de-row .de-col-7 {
+    flex: 1 0 14.28571%;
+    padding: 10px 15px; }
+  .de-responsive-container .de-row .de-col-8 {
+    flex: 1 0 12.5%;
+    padding: 10px 15px; }
+  .de-responsive-container .de-row .de-col-9 {
+    flex: 1 0 11.11111%;
+    padding: 10px 15px; }
+  .de-responsive-container .de-row .de-col-10 {
+    flex: 1 0 10%;
+    padding: 10px 15px; }
+  .de-responsive-container .de-row .de-col-11 {
+    flex: 1 0 9.09091%;
+    padding: 10px 15px; }
+  .de-responsive-container .de-row .de-col-12 {
+    flex: 1 0 8.33333%;
+    padding: 10px 15px; }
+
+header {
+  background-image: url("http://unsplash.it/3000/1500");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center; }
+  header .de-btn {
+    margin: 50px 0; }
