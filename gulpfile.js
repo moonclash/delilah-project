@@ -7,9 +7,15 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const fs = require('fs');
 
+function ignoreError (error) {
+  console.log(error.toString());
+  this.emit('end');
+}
+
 gulp.task('sass', () =>  {
-  return gulp.src('styling/**.scss')
+  return gulp.src('styling/**/*.scss')
   .pipe(sass())
+  .on('error', ignoreError)
   .pipe(gulp.dest('.'))
   .pipe(browserSync.reload({
     stream : true
@@ -60,7 +66,7 @@ gulp.task('uglify', () => {
 
 
 gulp.task('watch',['browserSync'], () =>  {
-  gulp.watch('styling/**.scss',['sass']);
+  gulp.watch('styling/**/*.scss',['sass']);
   gulp.watch('stylng/*.css',['autoprefixer']);
   gulp.watch('*.html', browserSync.reload);
 });

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import '_variables';
+
+html, body {
+	font-family: $base-font-family;
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, p {
+	margin: 5px;
+	line-height: 1.4;
+}
+
+p {
+	letter-spacing: .3px;
+}
+
+a {
+	font-weight: 800;
+	color: $blue-400;
+}
+
+h1 {
+	font-size: $font-size-large;
+}
+
+h2 {
+	font-size: $font-size-big;
+}
+
+h3 {
+	font-size: $font-size-small;
+}

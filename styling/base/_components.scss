@@ -2,31 +2,62 @@
 @import '../extends/_extends';
 
 // default button styling
-
 .de-btn {
-  @include background-hover($blue-500);
-  border-radius: 2px;
-  padding: 10px 25px;
-  display: inline-block;
-  border: none;
-  color: $white-500;
-  box-shadow: 0 0 8px 1px transparentize($grey-500, .7);
-  text-transform: uppercase;
- 
-  
-  &:focus {
-    outline: none;
-  }
-  
-  &:active {
-    transform: scale(.99);
-  }
-  
-  &.btn-success {
-    @include background-hover($green-500);
-  }
-  
-  &.btn-alert {
-    @include background-hover($red-500);
-  }
+    @include background-hover($blue-500);
+    border-radius: 2px;
+    padding: 10px 25px;
+    display: inline-block;
+    border: none;
+    color: $white-500;
+    box-shadow: 0 0 8px 1px transparentize($grey-500, .7);
+    text-transform: uppercase;
+
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        transform: scale(.99);
+    }
+
+    &.btn-success {
+        @include background-hover($green-500);
+    }
+
+    &.btn-alert {
+        @include background-hover($red-500);
+    }
+}
+
+
+.de-table {
+    margin: 50px;
+    box-shadow: 0 0 20px 1px transparentize($grey-500, 0.85);
+    border-collapse: collapse;
+
+    tr {
+        border-bottom: 1px solid lighten($grey-500, 60%);
+    }
+
+    th,
+    td {
+        padding: 10px 25px;
+    }
+    thead {
+
+    }
+
+    tbody {
+        tr {
+            &:last-child {
+                border: none;
+            }
+
+
+            &:nth-of-type(odd) {
+                background: lighten($grey-500, 70%);
+            }
+        }
+    }
 }

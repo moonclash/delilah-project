@@ -1,6 +1,18 @@
+// default delilah colours
+
 $blue-500: #018fd3;
 $white-500: #fff;
 $black-500: #000;
 $grey-500: #45454b;
 $red-500: #d01f1f;
 $green-500: #33cc66;
+$blue-400: #004aff;
+
+
+// typography varibles
+
+$base-font-size: 16px;
+$font-size-large: $base-font-size * 3;
+$font-size-big: $base-font-size * 2;
+$font-size-small: $base-font-size * 1.5;
+$base-font-family: 'Open Sans';

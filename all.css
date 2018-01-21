@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 html {
   line-height: 1.15;
   /* 1 */
@@ -392,6 +393,30 @@ template {
 * {
   box-sizing: border-box; }
 
+html, body {
+  font-family: "Open Sans";
+  text-rendering: optimizeLegibility; }
+
+h1, h2, h3, p {
+  margin: 5px;
+  line-height: 1.4; }
+
+p {
+  letter-spacing: .3px; }
+
+a {
+  font-weight: 800;
+  color: #004aff; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 32px; }
+
+h3 {
+  font-size: 24px; }
+
 .de-responsive-container {
   display: flex;
   flex-flow: column wrap; }
@@ -423,6 +448,20 @@ template {
     background: #d01f1f; }
     .de-btn.btn-alert:hover {
       background: #d92020; }
+
+.de-table {
+  margin: 50px;
+  box-shadow: 0 0 20px 1px rgba(69, 69, 75, 0.15);
+  border-collapse: collapse; }
+  .de-table tr {
+    border-bottom: 1px solid #e0e0e2; }
+  .de-table th,
+  .de-table td {
+    padding: 10px 25px; }
+  .de-table tbody tr:last-child {
+    border: none; }
+  .de-table tbody tr:nth-of-type(odd) {
+    background: #fafafb; }
 
 .de-responsive-container {
   display: flex;
