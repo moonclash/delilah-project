@@ -30,6 +30,21 @@
     }
 }
 
+input {
+  &[type=text], &[type=email] {
+    border: none;
+    box-shadow: 0 0 0 1px lighten($grey-500, 49%);
+    transition: 500ms all ease;
+    padding: 2px 2px;
+    &:focus {
+      outline: none;
+      transform: translateY(-10%);
+      box-shadow: 0 0 0 1px lighten($grey-500, 59%), 0 10px 12px -7px lighten($grey-500, 59%);
+    }
+  }
+  
+}
+
 
 .de-table {
     box-shadow: 0 0 20px 1px transparentize($grey-500, 0.85);
