@@ -30,7 +30,7 @@
     }
 }
 
-input {
+input.de-input {
   &[type=text], &[type=email] {
     border: none;
     box-shadow: 0 0 0 1px lighten($grey-500, 49%);
