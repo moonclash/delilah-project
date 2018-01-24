@@ -421,7 +421,7 @@ h3 {
   display: flex;
   flex-flow: column wrap; }
 
-.de-responsive-container .de-row {
+nav.de-nav ul, .de-responsive-container .de-row {
   display: flex;
   flex-flow: row wrap; }
 
@@ -449,15 +449,30 @@ h3 {
     .de-btn.btn-alert:hover {
       background: #d92020; }
 
-input[type=text], input[type=email] {
+input.de-input[type=text], .de-textarea, input.de-input[type=email] {
   border: none;
   box-shadow: 0 0 0 1px #c3c3c7;
   transition: 500ms all ease;
   padding: 7px 2px; }
-  input[type=text]:focus, input[type=email]:focus {
+  input.de-input[type=text]:focus, .de-textarea:focus, input.de-input[type=email]:focus {
     outline: none;
-    transform: translateY(-10%);
+    transform: translateY(-5%);
     box-shadow: 0 0 0 1px #dddde0, 0 10px 12px -7px #dddde0; }
+
+.de-checkbox {
+  display: inline-block; }
+  .de-checkbox input[type=checkbox] {
+    display: none; }
+  .de-checkbox:after {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: red; }
+
+.de-textarea {
+  resize: none;
+  padding: 5px 10px; }
 
 .de-table {
   box-shadow: 0 0 20px 1px rgba(69, 69, 75, 0.15);
@@ -472,11 +487,23 @@ input[type=text], input[type=email] {
   .de-table tbody tr:nth-of-type(odd) {
     background: #fafafb; }
 
+input[name="nav-toggle"] {
+  display: none; }
+
+nav.de-nav {
+  background: #018fd3;
+  padding: 15px 10px; }
+  nav.de-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around; }
+
 .de-responsive-container, header {
   display: flex;
   flex-flow: column wrap; }
 
-.de-responsive-container .de-row {
+nav.de-nav ul, .de-responsive-container .de-row {
   display: flex;
   flex-flow: row wrap; }
 

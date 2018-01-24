@@ -38,11 +38,31 @@ input.de-input {
     padding: 7px 2px;
     &:focus {
       outline: none;
-      transform: translateY(-10%);
+      transform: translateY(-5%);
       box-shadow: 0 0 0 1px lighten($grey-500, 59%), 0 10px 12px -7px lighten($grey-500, 59%);
     }
-  }
-  
+  }  
+}
+
+.de-checkbox {
+    display: inline-block;
+    input[type=checkbox] {
+        display: none;
+    }
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: red;
+    }
+}
+
+.de-textarea {
+    resize: none;
+    @extend input.de-input[type=text];
+    padding: 5px 10px;
 }
 
 
@@ -73,5 +93,21 @@ input.de-input {
                 background: lighten($grey-500, 70%);
             }
         }
+    }
+}
+
+input[name="nav-toggle"] {
+    display: none;
+}
+
+nav.de-nav {
+    background: $blue-500;
+    padding: 15px 10px;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @extend %flex-row;
+        justify-content: space-around;
     }
 }
