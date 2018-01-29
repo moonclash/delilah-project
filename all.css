@@ -487,16 +487,22 @@ input.de-input[type=text], .de-textarea, input.de-input[type=email] {
   .de-table tbody tr:nth-of-type(odd) {
     background: #fafafb; }
 
-input[name="nav-toggle"] {
+input[id="nav-toggle"] {
   display: none; }
+  input[id="nav-toggle"]:checked ~ .de-nav {
+    transform: translateY(0); }
 
 nav.de-nav {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
+  transition: 250ms all ease;
   background: #018fd3;
   padding: 15px 10px; }
+  @media all and (max-width: 768px) {
+    nav.de-nav {
+      transform: translateY(-80%); } }
   nav.de-nav ul {
     list-style: none;
     padding: 0;
@@ -511,6 +517,9 @@ nav.de-nav {
         align-items: flex-start; }
         nav.de-nav ul li {
           padding: 8px 5px; } }
+    @media all and (min-width: 768px) {
+      nav.de-nav ul li:last-child {
+        display: none; } }
 
 .de-responsive-container, header {
   display: flex;

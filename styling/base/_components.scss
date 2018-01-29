@@ -96,12 +96,21 @@ input.de-input {
     }
 }
 
-input[name="nav-toggle"] {
+input[id="nav-toggle"] {
     display: none;
+    &:checked ~ .de-nav {
+        transform: translateY(0);
+    }
 }
+
+// responsive navigation bar
 
 nav.de-nav {
     @include position(fixed, $left: 0, $right: 0, $top: 0);
+    transition: 250ms all ease;
+    @include until($screen-mobile) {
+        transform: translateY(-80%);
+    }
     background: $blue-500;
     padding: 15px 10px;
     ul {
@@ -114,6 +123,11 @@ nav.de-nav {
             align-items: flex-start;
             li {
                 padding: 8px 5px;
+            }
+        }
+        li:last-child {
+            @include at-least($screen-mobile) {
+                display: none;
             }
         }
 
