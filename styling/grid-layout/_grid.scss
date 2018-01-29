@@ -1,9 +1,9 @@
 // responsive container defaulted to a 1200px max width
 .de-responsive-container {
-    @include responsive-container(1200px); // rows for the container
+    @include responsive-container($screen-desktop); // rows for the container
     .de-row {
         @extend %flex-row;
-        @include until(800px) {
+        @include until($screen-mobile) {
         	flex-flow: column wrap;
         }
         @for $i from 1 through 12 {
