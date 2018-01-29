@@ -1,20 +1,24 @@
 (function iife() {
 	document.addEventListener('DOMContentLoaded', () => {
 		const Element = {
-			init(element) {
-				this.element = document.querySelector(element);
-				return this;
-			},
-			find(child) {
-				const childd = this.element.querySelector(child);
-				console.log(childd);
-				return childd;
+			init (domElement) {
+				this.element = document.querySelector(domElement);
+				this.children = null;
+				const elementChildren = [...this.element.childNodes];
+				if (elementChildren.length > 0) {
+					this.children = elementChildren.filter(child => child.nodeType == 1);
+				}
 				
 			}
 		}
+
+		Element.find = function(el) {
+			console.log(this.children);
+		}
 		const el = Object.create(Element);
 		el.init('header');
-		el.find('h1');
+		el.find();
+		
 	});
 })();
 
