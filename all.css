@@ -459,17 +459,6 @@ input.de-input[type=text], .de-textarea, input.de-input[type=email] {
     transform: translateY(-5%);
     box-shadow: 0 0 0 1px #dddde0, 0 10px 12px -7px #dddde0; }
 
-.de-checkbox {
-  display: inline-block; }
-  .de-checkbox input[type=checkbox] {
-    display: none; }
-  .de-checkbox:after {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    background: red; }
-
 .de-textarea {
   resize: none;
   padding: 5px 10px; }
@@ -573,7 +562,7 @@ nav.de-nav {
     padding: 10px 15px; }
 
 header {
-  background-image: url("http://unsplash.it/3000/1500");
+  background-image: url("http://unsplash.it/4500/2000");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

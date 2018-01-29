@@ -44,20 +44,7 @@ input.de-input {
   }  
 }
 
-.de-checkbox {
-    display: inline-block;
-    input[type=checkbox] {
-        display: none;
-    }
 
-    &:after {
-        content: '';
-        display: inline-block;
-        width: 18px;
-        height: 18px;
-        background: red;
-    }
-}
 
 .de-textarea {
     resize: none;
