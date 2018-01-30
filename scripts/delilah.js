@@ -3,21 +3,17 @@
 		const Element = {
 			init (domElement) {
 				this.element = document.querySelector(domElement);
-				this.children = null;
-				const elementChildren = [...this.element.childNodes];
-				if (elementChildren.length > 0) {
-					this.children = elementChildren.filter(child => child.nodeType == 1);
-				}
-				
+				return this;
 			}
 		}
 
 		Element.find = function(el) {
-			console.log(this.children);
+			return this.element.querySelector(el);
 		}
+		
 		const el = Object.create(Element);
 		el.init('header');
-		el.find();
+		el.find('h1').addEventListener('click', () => alert('hey'));
 		
 	});
 })();
