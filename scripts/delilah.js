@@ -13,7 +13,7 @@
 		};
 
 		Element.event = function(event, action) {
-			this.element.addEventListener(event, action);
+			this.element.addEventListener(event, action); 
 		};
 
 		const Elements = Object.create(Element);

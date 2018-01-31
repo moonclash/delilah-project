@@ -510,6 +510,12 @@ nav.de-nav {
       nav.de-nav ul li:last-child {
         display: none; } }
 
+.de-accordion {
+  transition: 300ms all ease;
+  overflow: hidden;
+  max-height: 100%;
+  background: pink; }
+
 .de-responsive-container, header {
   display: flex;
   flex-flow: column wrap; }
