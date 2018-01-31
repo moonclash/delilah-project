@@ -5,6 +5,11 @@
 @import 'extends/_extends';
 @import 'grid-layout/_grid';
 
+
 header {
 	@include header('http://unsplash.it/4500/2000');
+  &:after {
+    display: inline-block;
+    transform: scale(50);
+  }
 }

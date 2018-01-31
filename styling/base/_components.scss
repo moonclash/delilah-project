@@ -124,8 +124,11 @@ nav.de-nav {
 // accordion component
 
 .de-accordion {
-    transition: 300ms all ease;
-    overflow: hidden;
-    max-height: 100%;
-    background: pink;
+    
+    .accordion-body {
+        transition: 300ms all ease;
+        overflow: hidden;
+        max-height: 100%;
+        background: pink;
+    }
 }
