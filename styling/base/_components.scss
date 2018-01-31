@@ -143,7 +143,7 @@ nav.de-nav {
     }
     
     .accordion-body {
-        transition: max-height 300ms cubic-bezier(0.94,-0.17, 1, 1.07);
+        transition: max-height 200ms cubic-bezier(0.94,-0.17, 1, 1.07);
         overflow: hidden;
         max-height: 0;
     }
