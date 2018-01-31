@@ -488,6 +488,7 @@ nav.de-nav {
   left: 0;
   right: 0;
   top: 0;
+  z-index: 1;
   transition: 250ms all ease;
   background: #018fd3;
   padding: 15px 10px; }

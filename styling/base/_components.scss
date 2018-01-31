@@ -97,6 +97,7 @@ input[id="nav-toggle"] {
 
 nav.de-nav {
     @include position(fixed, $left: 0, $right: 0, $top: 0);
+    z-index: 1;
     transition: 250ms all ease;
     @include until($screen-mobile) {
         transform: translateY(-66%);
