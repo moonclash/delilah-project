@@ -566,6 +566,11 @@ nav.de-nav {
   .de-card .card-body {
     padding: 10px 15px; }
 
+.de-alert {
+  position: fixed;
+  left: 50%;
+  z-index: 2; }
+
 .de-responsive-container, header {
   display: flex;
   flex-flow: column wrap; }

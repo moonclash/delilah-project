@@ -26,13 +26,26 @@
 		Elements.event = function(event, action) {
 			this.element.forEach(element => element.addEventListener(event, action));
 		}
+
+    const Alerts = {
+      init(title, content) {
+        this.alertTitle = title;
+        this.alertContent = content;
+      }
+    }
+
+    Alerts.showAlert = function() {
+      
+    }
+
+    const passwordAlert = Object.create(Alerts);
+    passwordAlert.init('Wrong password', 'please enter your correct password');
+
+
+    Alerts.showAlert();
+
 		
-		const els = Object.create(Elements);
-		const lis = els.init('li');
-		function foo () {
-			console.log(this.textContent);
-		}
-		lis.event('click', foo);
+
 
 	});
 })();

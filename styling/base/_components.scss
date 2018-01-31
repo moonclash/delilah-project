@@ -193,3 +193,17 @@ nav.de-nav {
         padding: 10px 15px;
     }
 }
+
+//alert component
+
+.de-alert {
+    @include position(fixed, 50%);
+    z-index: 2;
+    .alert-header {
+
+    }
+
+    .alert-body {
+
+    }
+}
