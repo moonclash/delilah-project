@@ -147,7 +147,7 @@ nav.de-nav {
         box-shadow: 0 0 9px 1px transparentize($grey-500, .8),
                     5px 7px 21px 0 transparentize(lighten($grey-500, 66%), .4);
         padding: 10px 16px;
-        border-radius: 3px;
+        border-radius: $element-radius;
         
         label {
             order: -1;
@@ -160,5 +160,25 @@ nav.de-nav {
         overflow: hidden;
         max-height: 0;
 
+    }
+}
+
+// card component
+
+.de-card {
+    box-shadow: 0 0 24px 1px transparentize($grey-500, .8);
+    max-width: 500px;
+    border-radius: $element-radius;
+
+    .card-header {
+        border-radius: $element-radius;
+        min-height: 23vh;
+        max-height: 200px;
+        @include background-image('http://unsplash.it/1000/500');
+        @include flexbox(column, center, center);
+    }
+
+    .card-body {
+        padding: 10px 15px;
     }
 }

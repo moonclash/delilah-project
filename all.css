@@ -538,6 +538,25 @@ nav.de-nav {
   overflow: hidden;
   max-height: 0; }
 
+.de-card {
+  box-shadow: 0 0 24px 1px rgba(69, 69, 75, 0.2);
+  max-width: 500px;
+  border-radius: 3px; }
+  .de-card .card-header {
+    border-radius: 3px;
+    min-height: 23vh;
+    max-height: 200px;
+    background-image: url("http://unsplash.it/1000/500");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center; }
+  .de-card .card-body {
+    padding: 10px 15px; }
+
 .de-responsive-container, header {
   display: flex;
   flex-flow: column wrap; }
