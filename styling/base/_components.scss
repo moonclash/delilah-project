@@ -130,7 +130,8 @@ nav.de-nav {
     input[type=checkbox] {
             display: none;
             &:checked ~ .accordion-body {
-                max-height: 2000px;
+                max-height: 100vh;
+                overflow: visible;
             }
         }
     .accordion-head {

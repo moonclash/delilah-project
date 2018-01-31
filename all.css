@@ -515,7 +515,8 @@ nav.de-nav {
 .de-accordion input[type=checkbox] {
   display: none; }
   .de-accordion input[type=checkbox]:checked ~ .accordion-body {
-    max-height: 2000px; }
+    max-height: 100vh;
+    overflow: visible; }
 
 .de-accordion .accordion-head {
   background: #fff;
