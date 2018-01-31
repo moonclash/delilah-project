@@ -480,6 +480,8 @@ input[id="nav-toggle"] {
   display: none; }
   input[id="nav-toggle"]:checked ~ .de-nav {
     transform: translateY(0); }
+    input[id="nav-toggle"]:checked ~ .de-nav li:last-child {
+      order: -1; }
 
 nav.de-nav {
   position: fixed;
@@ -491,7 +493,7 @@ nav.de-nav {
   padding: 15px 10px; }
   @media all and (max-width: 768px) {
     nav.de-nav {
-      transform: translateY(-80%); } }
+      transform: translateY(-66%); } }
   nav.de-nav ul {
     list-style: none;
     padding: 0;
@@ -513,9 +515,10 @@ nav.de-nav {
 .de-accordion input[type=checkbox] {
   display: none; }
   .de-accordion input[type=checkbox]:checked ~ .accordion-body {
-    max-height: 100vh; }
+    max-height: 2000px; }
 
 .de-accordion .accordion-head {
+  background: #fff;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;

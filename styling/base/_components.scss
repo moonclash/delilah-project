@@ -87,6 +87,9 @@ input[id="nav-toggle"] {
     display: none;
     &:checked ~ .de-nav {
         transform: translateY(0);
+        li:last-child {
+            order: -1;
+        }
     }
 }
 
@@ -96,7 +99,7 @@ nav.de-nav {
     @include position(fixed, $left: 0, $right: 0, $top: 0);
     transition: 250ms all ease;
     @include until($screen-mobile) {
-        transform: translateY(-80%);
+        transform: translateY(-66%);
     }
     background: $blue-500;
     padding: 15px 10px;
@@ -127,10 +130,11 @@ nav.de-nav {
     input[type=checkbox] {
             display: none;
             &:checked ~ .accordion-body {
-                max-height: 100vh;
+                max-height: 2000px;
             }
         }
     .accordion-head {
+        background: $white-500;
         @include flexbox(row, flex-start, center);
         box-shadow: 0 0 9px 1px transparentize($grey-500, .8),
                     5px 7px 21px 0 transparentize(lighten($grey-500, 66%), .4);
