@@ -124,11 +124,27 @@ nav.de-nav {
 // accordion component
 
 .de-accordion {
+    input[type=checkbox] {
+            display: none;
+            &:checked ~ .accordion-body {
+                max-height: 100vh;
+            }
+        }
+    .accordion-head {
+        @include flexbox(row, flex-start, center);
+        box-shadow: 0 0 9px 1px transparentize($grey-500, .8),
+                    5px 7px 21px 0 transparentize(lighten($grey-500, 66%), .4);
+        padding: 10px 16px;
+        border-radius: 3px;
+        
+        label {
+            order: -1;
+        }
+    }
     
     .accordion-body {
-        transition: 300ms all ease;
+        transition: max-height 300ms cubic-bezier(0.94,-0.17, 1, 1.07);
         overflow: hidden;
-        max-height: 100%;
-        background: pink;
+        max-height: 0;
     }
 }
