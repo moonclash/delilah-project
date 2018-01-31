@@ -539,9 +539,16 @@ nav.de-nav {
   max-height: 0; }
 
 .de-card {
-  box-shadow: 0 0 24px 1px rgba(69, 69, 75, 0.2);
+  box-shadow: 7px 9px 24px 1px rgba(69, 69, 75, 0.2);
   max-width: 500px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  transition: 700ms all ease; }
+  .de-card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 24px 1px rgba(69, 69, 75, 0.2);
+    transform: translateY(-1%); }
+    .de-card:hover .card-header {
+      background-position: right center; }
   .de-card .card-header {
     border-radius: 3px;
     min-height: 23vh;
@@ -553,7 +560,8 @@ nav.de-nav {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    transition: 1s all ease-in-out; }
   .de-card .card-body {
     padding: 10px 15px; }
 

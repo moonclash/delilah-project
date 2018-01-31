@@ -166,9 +166,18 @@ nav.de-nav {
 // card component
 
 .de-card {
-    box-shadow: 0 0 24px 1px transparentize($grey-500, .8);
+    box-shadow: 7px 9px 24px 1px transparentize($grey-500, .8);
     max-width: 500px;
     border-radius: $element-radius;
+    transition: 700ms all ease;
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 24px 1px transparentize($grey-500, .8);
+        transform: translateY(-1%);
+        .card-header {
+            background-position: right center;
+        }
+    }
 
     .card-header {
         border-radius: $element-radius;
@@ -176,6 +185,7 @@ nav.de-nav {
         max-height: 200px;
         @include background-image('http://unsplash.it/1000/500');
         @include flexbox(column, center, center);
+        transition: 1s all ease-in-out;
     }
 
     .card-body {
