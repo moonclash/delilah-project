@@ -514,6 +514,8 @@ nav.de-nav {
 
 .de-accordion input[type=checkbox] {
   display: none; }
+  .de-accordion input[type=checkbox]:checked ~ .accordion-head label {
+    transform: rotate(180deg); }
   .de-accordion input[type=checkbox]:checked ~ .accordion-body {
     max-height: 100vh;
     overflow: visible; }
@@ -532,6 +534,7 @@ nav.de-nav {
 
 .de-accordion .accordion-body {
   transition: max-height 200ms cubic-bezier(0.94, -0.17, 1, 1.07);
+  padding: 0px 16px;
   overflow: hidden;
   max-height: 0; }
 

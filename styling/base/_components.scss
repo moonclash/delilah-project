@@ -129,9 +129,16 @@ nav.de-nav {
 .de-accordion {
     input[type=checkbox] {
             display: none;
-            &:checked ~ .accordion-body {
-                max-height: 100vh;
-                overflow: visible;
+            &:checked {
+                ~ .accordion-head {
+                    label {
+                        transform: rotate(180deg);
+                    }
+                }
+                ~ .accordion-body {
+                    max-height: 100vh;
+                    overflow: visible;
+                }
             }
         }
     .accordion-head {
@@ -149,7 +156,9 @@ nav.de-nav {
     
     .accordion-body {
         transition: max-height 200ms cubic-bezier(0.94,-0.17, 1, 1.07);
+        padding: 0px 16px;
         overflow: hidden;
         max-height: 0;
+
     }
 }
