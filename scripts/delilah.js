@@ -2,14 +2,19 @@
 	document.addEventListener('DOMContentLoaded', () => {
 		const Element = {
 			init (domElement) {
-				this.element = document.querySelector(domElement);
-				console.log(this);
+        if (typeof domElement == 'string') {
+          this.element = document.querySelector(domElement);
+        }
+        else {
+          this.element = domElement;
+        }
+				
 				return this;
 			}
 		}
 
 		Element.find = function(el) {
-			return this.element.querySelector(el);
+			return this.init(this.element.querySelector(el));
 		};
 
 		Element.event = function(event, action) {
@@ -30,6 +35,7 @@
     const Alerts = {
       init(title, content) {
         this.alertElement = Element.init('.de-alert');
+        console.log(this.alertElement);
         this.alertTitle = title;
         this.alertContent = content;
         this.alertElement.find('.de-btn').event('click', this.closeAlert);
