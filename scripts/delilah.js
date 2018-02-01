@@ -29,16 +29,24 @@
 
     const Alerts = {
       init(title, content) {
+        this.alertElement = Element.init('.de-alert');
         this.alertTitle = title;
         this.alertContent = content;
+        this.alertElement.find('.de-btn').event('click', this.closeAlert);
       }
     }
 
     Alerts.showAlert = function() {
-      
+      document.body.classList.add('alert-open');
+    }
+
+    Alerts.closeAlert = function() {
+      document.body.classList.remove('alert-open');
     }
 
     const passwordAlert = Object.create(Alerts);
+    const cards = Elements.init('.de-card');
+    cards.event('click', Alerts.showAlert);
     passwordAlert.init('Wrong password', 'please enter your correct password');
 
 

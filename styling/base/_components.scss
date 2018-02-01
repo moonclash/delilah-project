@@ -34,17 +34,18 @@
 }
 
 input.de-input {
-  &[type=text], &[type=email] {
-    border: none;
-    box-shadow: 0 0 0 1px lighten($grey-500, 49%);
-    transition: 500ms all ease;
-    padding: 7px 2px;
-    &:focus {
-      outline: none;
-      transform: translateY(-5%);
-      box-shadow: 0 0 0 1px lighten($grey-500, 59%), 0 10px 12px -7px lighten($grey-500, 59%);
+    &[type=text],
+    &[type=email] {
+        border: none;
+        box-shadow: 0 0 0 1px lighten($grey-500, 49%);
+        transition: 500ms all ease;
+        padding: 7px 2px;
+        &:focus {
+            outline: none;
+            transform: translateY(-5%);
+            box-shadow: 0 0 0 1px lighten($grey-500, 59%), 0 10px 12px -7px lighten($grey-500, 59%);
+        }
     }
-  }  
 }
 
 
@@ -68,9 +69,7 @@ input.de-input {
     td {
         padding: 10px 25px;
     }
-    thead {
-
-    }
+    thead {}
 
     tbody {
         tr {
@@ -88,7 +87,7 @@ input.de-input {
 
 input[id="nav-toggle"] {
     display: none;
-    &:checked ~ .de-nav {
+    &:checked~.de-nav {
         transform: translateY(0);
         li:last-child {
             order: -1;
@@ -97,7 +96,6 @@ input[id="nav-toggle"] {
 }
 
 // responsive navigation bar
-
 nav.de-nav {
     @include position(fixed, $left: 0, $right: 0, $top: 0);
     z-index: 1;
@@ -124,51 +122,47 @@ nav.de-nav {
                 display: none;
             }
         }
-
     }
 }
 
 // accordion component
-
 .de-accordion {
     input[type=checkbox] {
-            display: none;
-            &:checked {
-                ~ .accordion-head {
-                    label {
-                        transform: rotate(180deg);
-                    }
-                }
-                ~ .accordion-body {
-                    max-height: 100vh;
-                    overflow: visible;
+        display: none;
+        &:checked {
+            ~.accordion-head {
+                label {
+                    transform: rotate(180deg);
                 }
             }
+            ~.accordion-body {
+                max-height: 100vh;
+                overflow: visible;
+            }
         }
+    }
     .accordion-head {
         background: $white-500;
         @include flexbox(row, flex-start, center);
         box-shadow: 0 0 9px 1px transparentize($grey-500, .8),
-                    5px 7px 21px 0 transparentize(lighten($grey-500, 66%), .4);
+        5px 7px 21px 0 transparentize(lighten($grey-500, 66%), .4);
         padding: 10px 16px;
         border-radius: $element-radius;
-        
+
         label {
             order: -1;
         }
     }
-    
+
     .accordion-body {
-        transition: max-height 200ms cubic-bezier(0.94,-0.17, 1, 1.07);
+        transition: max-height 200ms cubic-bezier(0.94, -0.17, 1, 1.07);
         padding: 0px 16px;
         overflow: hidden;
         max-height: 0;
-
     }
 }
 
 // card component
-
 .de-card {
     box-shadow: $element-shadow;
     max-width: 500px;
@@ -198,7 +192,6 @@ nav.de-nav {
 }
 
 //alert component
-
 .de-alert {
     @extend %fixed-center;
     background: $white-500;
@@ -206,22 +199,29 @@ nav.de-nav {
     z-index: 2;
     border-radius: $element-radius;
     box-shadow: $element-shadow;
-    .alert-header {
-        
-    }
+    display: none;
+    
+    .alert-header {}
 
-    .alert-body {
-
-    }
+    .alert-body {}
 }
 
-.de-overlay {
-    @include position(fixed, 0, 0, 0, 0);
-    background: transparentize($black-500, .5);
-    z-index: 2;
-}
 
-.de-main-content {
-    filter: blur(2px);
-    @include position(fixed, 0, 0, 0, 0);
+
+body.alert-open {
+
+    .de-overlay {
+        @include position(fixed, 0, 0, 0, 0);
+        background: transparentize($black-500, .5);
+        z-index: 2;
+    }
+
+    .de-main-content {
+        filter: blur(2px);
+        @include position(fixed, 0, 0, 0, 0);
+    }
+
+    .de-alert {
+        display: block;
+    }
 }

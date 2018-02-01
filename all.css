@@ -579,9 +579,10 @@ nav.de-nav {
   padding: 10px 25px;
   z-index: 2;
   border-radius: 3px;
-  box-shadow: 7px 9px 24px 1px rgba(69, 69, 75, 0.2); }
+  box-shadow: 7px 9px 24px 1px rgba(69, 69, 75, 0.2);
+  display: none; }
 
-.de-overlay {
+body.alert-open .de-overlay {
   position: fixed;
   left: 0;
   right: 0;
@@ -590,13 +591,16 @@ nav.de-nav {
   background: rgba(0, 0, 0, 0.5);
   z-index: 2; }
 
-.de-main-content {
+body.alert-open .de-main-content {
   filter: blur(2px);
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0; }
+
+body.alert-open .de-alert {
+  display: block; }
 
 .de-responsive-container, header {
   display: flex;
