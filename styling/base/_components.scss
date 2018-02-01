@@ -11,6 +11,9 @@
     color: $white-500;
     box-shadow: 0 0 8px 1px transparentize($grey-500, .7);
     text-transform: uppercase;
+    &:hover {
+        cursor: pointer;
+    }
 
 
     &:focus {
@@ -167,7 +170,7 @@ nav.de-nav {
 // card component
 
 .de-card {
-    box-shadow: 7px 9px 24px 1px transparentize($grey-500, .8);
+    box-shadow: $element-shadow;
     max-width: 500px;
     border-radius: $element-radius;
     transition: 700ms all ease;
@@ -197,13 +200,28 @@ nav.de-nav {
 //alert component
 
 .de-alert {
-    @include position(fixed, 50%);
+    @extend %fixed-center;
+    background: $white-500;
+    padding: 10px 25px;
     z-index: 2;
+    border-radius: $element-radius;
+    box-shadow: $element-shadow;
     .alert-header {
-
+        
     }
 
     .alert-body {
 
     }
+}
+
+.de-overlay {
+    @include position(fixed, 0, 0, 0, 0);
+    background: transparentize($black-500, .5);
+    z-index: 2;
+}
+
+.de-main-content {
+    filter: blur(2px);
+    @include position(fixed, 0, 0, 0, 0);
 }

@@ -425,6 +425,12 @@ h3 {
   display: flex;
   flex-flow: row wrap; }
 
+.de-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
 .de-btn {
   background: #018fd3;
   border-radius: 2px;
@@ -436,6 +442,8 @@ h3 {
   text-transform: uppercase; }
   .de-btn:hover {
     background: #0196dd; }
+  .de-btn:hover {
+    cursor: pointer; }
   .de-btn:focus {
     outline: none; }
   .de-btn:active {
@@ -567,9 +575,28 @@ nav.de-nav {
     padding: 10px 15px; }
 
 .de-alert {
+  background: #fff;
+  padding: 10px 25px;
+  z-index: 2;
+  border-radius: 3px;
+  box-shadow: 7px 9px 24px 1px rgba(69, 69, 75, 0.2); }
+
+.de-overlay {
   position: fixed;
-  left: 50%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 2; }
+
+.de-main-content {
+  filter: blur(2px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
 
 .de-responsive-container, header {
   display: flex;
@@ -578,6 +605,12 @@ nav.de-nav {
 .de-responsive-container .de-row {
   display: flex;
   flex-flow: row wrap; }
+
+.de-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 .de-responsive-container {
   max-width: 1200px;

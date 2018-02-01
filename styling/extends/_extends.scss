@@ -10,6 +10,13 @@
   flex-flow: row wrap;
 }
 
+%fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @mixin flexbox($direction, $justify-content, $align-items) {
   display: flex;
   flex-flow: $direction wrap;

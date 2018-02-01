@@ -24,6 +24,7 @@ $screen-tablet: 992px;
 $screen-desktop: 1200px;
 
 
-// other sizings
+// elements variables
 
 $element-radius: 3px;
+$element-shadow: 7px 9px 24px 1px transparentize($grey-500, .8);
