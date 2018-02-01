@@ -33,33 +33,30 @@
 		}
 
     const Alerts = {
-      init(title, content) {
+      init(title = null, content = null) {
         this.alertElement = Element.init('.de-alert');
-        console.log(this.alertElement);
-        this.alertTitle = title;
-        this.alertContent = content;
+        if (title && content) {
+          console.log(this.alertElement);
+        }
         this.alertElement.find('.de-btn').event('click', this.closeAlert);
+        return this;
       }
     }
 
-    Alerts.showAlert = function() {
+    const Alert = Object.create(Alerts);
+
+    Alert.showAlert = function() {
       document.body.classList.add('alert-open');
+      return this;
     }
 
-    Alerts.closeAlert = function() {
+    Alert.closeAlert = function() {
       document.body.classList.remove('alert-open');
     }
 
-    const passwordAlert = Object.create(Alerts);
+    const passwordAlert = Alert.init('Invalid input', 'please provide different details');
     const cards = Elements.init('.de-card');
-    cards.event('click', Alerts.showAlert);
-    passwordAlert.init('Wrong password', 'please enter your correct password');
-
-
-    Alerts.showAlert();
-
-		
-
+    cards.event('click',  Alert.showAlert);
 
 	});
 })();

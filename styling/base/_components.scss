@@ -200,10 +200,15 @@ nav.de-nav {
     border-radius: $element-radius;
     box-shadow: $element-shadow;
     display: none;
+    text-align: center;
     
-    .alert-header {}
+    .alert-header {
+    }
 
-    .alert-body {}
+    .alert-body {
+        @include flexbox(row, center, center);
+        padding: 50px 25px;
+    }
 }
 
 
