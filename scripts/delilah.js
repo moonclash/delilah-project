@@ -21,6 +21,18 @@
 			this.element.addEventListener(event, action); 
 		};
 
+    Element.addClass = function(className) {
+        this.element.classList.add(className);
+    }
+
+    Element.removeClass = function(className) {
+        this.element.classList.remove(className);
+    }
+
+    Element.toggleClass = function(className) {
+        this.element.classList.toggle(className);
+    }
+
 		const Elements = Object.create(Element);
 
 		Elements.init = function(domElements) {
