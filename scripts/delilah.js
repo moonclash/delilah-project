@@ -11,13 +11,12 @@
         else {
           this.element = domElement;
         }
-       
         return this;
       }
     }
 
     Element.find = function(el) {
-      return this.init(this.element.querySelector('h1'));
+      return this.init(this.element.querySelector(el));
     }
 
     Element.event = function(event, handler) {
@@ -27,6 +26,17 @@
 
     Element.text = function(text) {
       this.element.textContent = text;
+      return this;
+    }
+
+    Element.addClass = function(className) {
+      this.element.classList.add(className);
+      return this;
+    }
+
+
+    Element.removeClass = function(className) {
+      this.element.classList.remove(className);
       return this;
     }
 
@@ -40,15 +50,49 @@
 
     Elements.init = function(domElement) {
       this.element = document.querySelectorAll(domElement);
+      return this;
     }
 
     Elements.event = function(event, handler) {
       this.element.forEach(element => element.addEventListener(event, handler));
+      return this;
     }
 
-    const cards = Object.create(Elements);
-    cards.init('.de-card');
-    cards.event('click', () => console.log(this));
+    Elements.text = function(text) {
+      this.element.forEach(element => element.textContent = text);
+    }
+
+    const Alert = {
+      init(title = null, content = null) {
+        this.alertElement = Element.init('.de-alert');
+        if (title && content) {
+          this.title = title;
+          this.content = content;
+        }
+        return this;
+      }
+    }
+
+    Alert.showAlert = function() {
+      const body = Object.create(Element);
+      body.init('body');
+      
+      const alertHeader = this.alertElement.find('.alert-header');
+      //const alertBody = this.alertElement.find('.alert-body');
+      console.log(alertHeader);
+      body.addClass('alert-open');
+     
+    }
+
+    Alert.closeAlert = function() {
+      const body = Element.init('body');
+      body.removeClass('alert-open');
+    }
+
+    const al = Object.create(Alert);
+    al.init('invalid input', 'you cant do this');
+    al.showAlert();
+
 
 
     // Multiple elements functionality
