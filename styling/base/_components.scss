@@ -202,9 +202,8 @@ nav.de-nav {
     box-shadow: $element-shadow;
     display: none;
     text-align: center;
-    
-    .alert-header {
-    }
+
+    .alert-header {}
 
     .alert-body {
         @include flexbox(row, center, center);
@@ -234,7 +233,6 @@ body.alert-open {
 
 
 // modal
-
 .de-modal {
     @extend %fixed-center;
     border-radius: $element-radius;
@@ -285,7 +283,6 @@ body.modal-open {
 
 
 // loader component
-
 .de-loader {
     position: relative;
     width: 30px;
@@ -306,19 +303,8 @@ body.modal-open {
     }
 
     &:after {
-        @extend .de-loader:before;
+        @extend .de-loader: before;
         bottom: -10px;
         top: 15px;
-        
     }
 }
-
-
-
-
-
-
-
-
-
-
