@@ -133,17 +133,23 @@
 
         const Appearable = {
           init(el) {
-            const screenMiddle = window.innerHeight / 2;
             this.appearable = Element.init(el);
-            const top = this.appearable.getDimension('top');
-            
+            document.addEventListener('scroll', this.appear.bind(this));
           }
+        }
+
+        Appearable.appear = function() {
+            const screenMiddle = window.innerHeight / 2;
+            const top = this.appearable.getDimension('top');
+            if (top <= screenMiddle) {
+                this.appearable.addClass('appear');
+            }
         }
 
         // Appearable elements functionality
 
         const h1Animate = Object.create(Appearable);
-        Appearable.init('h1');
+        Appearable.init('.de-card');
 
 
         

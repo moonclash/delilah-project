@@ -599,7 +599,7 @@ h3 {
     opacity: 0; } }
 
 .de-twistAndShow {
-  animation: 600ms de-twistAndShow ease-in-out; }
+  animation: 600ms de-twistAndShow ease-in-out forwards; }
 
 .de-flipAndShowDown {
   animation: 400ms de-flipAndShowDown cubic-bezier(0.7, 0.8, 0.6, 0.4); }
@@ -916,6 +916,11 @@ body.modal-open .de-modal {
   .de-loader:after {
     bottom: -10px;
     top: 15px; }
+
+.de-appearable {
+  animation-play-state: paused; }
+  .de-appearable.appear {
+    animation-play-state: running; }
 
 .de-responsive-container, header {
   display: flex;

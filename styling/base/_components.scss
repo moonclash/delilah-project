@@ -303,8 +303,18 @@ body.modal-open {
     }
 
     &:after {
-        @extend .de-loader: before;
+        @extend .de-loader:before;
         bottom: -10px;
         top: 15px;
+    }
+}
+
+
+//appearables
+
+.de-appearable {
+    animation-play-state: paused;
+    &.appear {
+        animation-play-state: running;
     }
 }

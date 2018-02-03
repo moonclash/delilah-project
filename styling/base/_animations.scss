@@ -278,7 +278,8 @@
 //entries-classes
 
 .de-twistAndShow {
-  animation: 600ms de-twistAndShow ease-in-out;
+  animation: 600ms de-twistAndShow ease-in-out forwards;
+  
 }
 
 .de-flipAndShowDown {
