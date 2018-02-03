@@ -70,6 +70,7 @@
           this.title = title;
           this.content = content;
         }
+        this.alertElement.find('.de-btn').event('click', this.closeAlert);
         return this;
       }
     }
