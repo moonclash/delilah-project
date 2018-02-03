@@ -16,7 +16,8 @@
     }
 
     Element.find = function(el) {
-      return this.init(this.element.querySelector(el));
+      const thisElement = Object.create(this);
+      return thisElement.init(this.element.querySelector(el))
     }
 
     Element.event = function(event, handler) {
@@ -76,10 +77,8 @@
     Alert.showAlert = function() {
       const body = Object.create(Element);
       body.init('body');
-      
-      const alertHeader = this.alertElement.find('.alert-header');
-      //const alertBody = this.alertElement.find('.alert-body');
-      console.log(alertHeader);
+      this.alertElement.find('.alert-header h3').text(this.title);
+      this.alertElement.find('.alert-body p').text(this.content);
       body.addClass('alert-open');
      
     }
@@ -90,7 +89,7 @@
     }
 
     const al = Object.create(Alert);
-    al.init('invalid input', 'you cant do this');
+    al.init('invalid input', 'you cant do this bro');
     al.showAlert();
 
 
