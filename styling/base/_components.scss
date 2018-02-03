@@ -239,6 +239,7 @@ body.alert-open {
     border-radius: $element-radius;
     box-shadow: $element-shadow;
     background: $white-500;
+    display: none;
 
     .modal-header {
         padding: 5px 0;
@@ -255,6 +256,24 @@ body.alert-open {
         box-shadow: 0 -7px 0 -6px lighten($grey-500, 60%);
         padding: 10px 0;
         @include flexbox(row, center, center);
+    }
+}
+
+body.modal-open {
+    .de-overlay {
+        @include position(fixed, 0, 0, 0, 0);
+        background: transparentize($black-500, .5);
+        z-index: 2;
+    }
+
+    .de-main-content {
+        filter: blur(2px);
+        @include position(fixed, 0, 0, 0, 0);
+    }
+
+    .de-modal {
+        z-index: 2;
+        display: block;
     }
 }
 

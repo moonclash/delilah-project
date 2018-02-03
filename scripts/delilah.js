@@ -102,6 +102,33 @@
 
     // Alert functionality
 
+    // Modal functionality
+
+      const Modal = {
+        init(modalId) {
+          this.modalElement = Element.init(modalId);
+          this.modalElement.find('button[data-toggle=close]').event('click', this.closeModal);
+        }
+      }
+
+      Modal.openModal = function() {
+        const body = Element.init('body');
+        body.addClass('modal-open');
+      }
+
+      Modal.closeModal = function() {
+        const body = Element.init('body');
+        body.removeClass('modal-open');
+      } 
+
+      const fooModal = Object.create(Modal);
+      fooModal.init('#modal-foo');
+      
+      const h1 = Element.init('h1');
+      h1.event('click', fooModal.openModal); 
+
+    // Modal functionality
+
 
 
 
