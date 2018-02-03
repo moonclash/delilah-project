@@ -1,5 +1,6 @@
 @import '_variables';
 @import '../extends/_extends';
+@import '_animations';
 
 // default button styling
 .de-btn {
@@ -281,6 +282,38 @@ body.modal-open {
         display: block;
     }
 }
+
+
+// loader component
+
+.de-loader {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: 1s de-spin infinite linear;
+
+    &:before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background: $blue-500;
+        position: absolute;
+        border-radius: 50%;
+        top: -8px;
+        left: 15px;
+        animation: 1s de-pulse infinite alternate;
+    }
+
+    &:after {
+        @extend .de-loader:before;
+        bottom: -10px;
+        top: 15px;
+        
+    }
+}
+
+
 
 
 
