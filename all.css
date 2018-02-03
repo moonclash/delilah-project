@@ -628,6 +628,10 @@ body.alert-open .de-alert {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center; }
+  @media all and (max-width: 768px) {
+    .de-modal {
+      max-height: 500px;
+      overflow: scroll; } }
 
 body.modal-open .de-overlay {
   position: fixed;

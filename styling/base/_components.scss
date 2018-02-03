@@ -257,6 +257,11 @@ body.alert-open {
         padding: 10px 0;
         @include flexbox(row, center, center);
     }
+
+    @include until($screen-mobile) {
+        max-height: 500px;
+        overflow: scroll;
+    }
 }
 
 body.modal-open {
