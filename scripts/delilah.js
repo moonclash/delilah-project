@@ -41,6 +41,11 @@
       return this;
     }
 
+    Element.toggleClass = function(className) {
+      this.element.classList.toggle(className);
+      return this;
+    }
+
     // single element functionality 
 
 
@@ -62,6 +67,12 @@
     Elements.text = function(text) {
       this.element.forEach(element => element.textContent = text);
     }
+
+
+    // Multiple elements functionality
+
+
+    // Alert functionality
 
     const Alert = {
       init(title = null, content = null) {
@@ -89,13 +100,9 @@
       body.removeClass('alert-open');
     }
 
-    const al = Object.create(Alert);
-    al.init('invalid input', 'you cant do this bro');
-    al.showAlert();
+    // Alert functionality
 
 
-
-    // Multiple elements functionality
 
 
 

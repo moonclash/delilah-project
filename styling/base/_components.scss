@@ -230,3 +230,38 @@ body.alert-open {
         display: block;
     }
 }
+
+
+// modal
+
+.de-modal {
+    @extend %fixed-center;
+    border-radius: $element-radius;
+    box-shadow: $element-shadow;
+    background: $white-500;
+
+    .modal-header {
+        padding: 5px 0;
+        box-shadow: 0 1px 0 lighten($grey-500, 60%);
+    }
+
+    .modal-body {
+        padding: 5px 15px;
+        overflow-y: scroll;
+        max-height: 500px;
+    }
+
+    .modal-footer {
+        box-shadow: 0 -7px 0 -6px lighten($grey-500, 60%);
+        padding: 10px 0;
+        @include flexbox(row, center, center);
+    }
+}
+
+
+
+
+
+
+
+
