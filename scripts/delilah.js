@@ -47,8 +47,8 @@
 
 
         Element.getDimension = function(dimension) {
-          const elementDimensions = this.element.getBoundingClientRect();
-          return elementDimensions[dimension];
+            const elementDimensions = this.element.getBoundingClientRect();
+            return elementDimensions[dimension];
         }
 
         // single element functionality 
@@ -57,32 +57,23 @@
         // Multiple elements functionality
 
 
-        const Elements = Object.create(Element);
+        const Elements = {
+
+        }
 
         Elements.init = function(domElement) {
-            this.element = document.querySelectorAll(domElement);
+            this.elements = document.querySelectorAll(domElement);
             return this;
         }
 
         Elements.event = function(event, handler) {
-            this.element.forEach(element => element.addEventListener(event, handler));
+            this.elements.forEach(element => element.addEventListener(event, handler));
             return this;
         }
 
         Elements.text = function(text) {
-            this.element.forEach(element => element.textContent = text);
+            this.elements.forEach(element => element.textContent = text);
         }
-
-        Elements.appearable = function() {
-            const screenMiddle = window.innerHeight / 2;
-            const top = this.element.getDimension('top');
-            
-            if (top <= screenMiddle) {
-                console.log(true);
-                this.appearable.addClass('appear');
-            }
-        }
-
 
         // Multiple elements functionality
 
@@ -141,32 +132,25 @@
 
         // Appearable elements functionality
 
-        const Appearable = {
-          init(el) {
-            this.appearable = Element.init(el);
-            document.addEventListener('scroll', this.appear.bind(this));
-            return this;
-          }
+        function animateThis() {
+            const boxes = document.querySelectorAll('.de-appearable');
+            const mid = window.innerHeight / 2;
+
+            function moveElement(element) {
+                if (element.getBoundingClientRect().top <= mid) {
+                    element.classList.add('appear');
+                }
+            }
+            boxes.forEach(box => moveElement(box));
         }
 
-        Appearable.appear = function() {
-            const screenMiddle = window.innerHeight / 2;
-            const top = this.appearable.getDimension('top');
-            
-            if (top <= screenMiddle) {
-                console.log(true);
-                this.appearable.addClass('appear');
-            }
-        }
+        document.addEventListener('scroll', animateThis);
+
+
+
 
         // Appearable elements functionality
 
-        // const h1Animate = Object.create(Appearable);
-        // Appearable.init('.de-card');
-
-        const cards = Object.create(Elements);
-        cards.init('.de-card');
-        cards.appearable();
 
     });
 })();
