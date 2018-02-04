@@ -922,6 +922,9 @@ body.modal-open .de-modal {
   .de-appearable.appear {
     animation-play-state: running; }
 
+.de-parallax {
+  background-attachment: fixed; }
+
 .de-responsive-container, header {
   display: flex;
   flex-flow: column wrap; }

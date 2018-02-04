@@ -51,6 +51,11 @@
             return elementDimensions[dimension];
         }
 
+        Element.children = function() {
+            const nodes = [...this.element.childNodes].filter(e => e.nodeType === 1);
+            return nodes;
+        }
+
         // single element functionality 
 
 
@@ -151,7 +156,21 @@
             }
         }
 
-        Appearables.init();
+
+        const Parallax = {
+            init() {
+                const parallaxElement = Element.init('header');
+                const parallaxItems = Elements.init('.parallax-item');
+                function parallaxScroll() {
+                    const windowScroll = window.scrollY;
+                    console.log(parallaxItems);
+                }
+                document.addEventListener('scroll', parallaxScroll);
+
+            }
+        }
+
+        Parallax.init();
 
         // Appearable elements functionality
 
