@@ -923,7 +923,9 @@ body.modal-open .de-modal {
     animation-play-state: running; }
 
 .de-parallax {
-  background-attachment: fixed; }
+  position: relative;
+  background-attachment: fixed;
+  overflow: hidden; }
 
 .de-responsive-container, header {
   display: flex;

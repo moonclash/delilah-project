@@ -158,19 +158,21 @@
 
 
         const Parallax = {
-            init() {
+            init(factor) {
                 const parallaxElement = Element.init('header');
                 const parallaxItems = Elements.init('.parallax-item');
                 function parallaxScroll() {
                     const windowScroll = window.scrollY;
-                    console.log(parallaxItems);
+                    parallaxItems.elements.forEach((item, index) => {
+                        item.style = `transform:translateY(${windowScroll /  factor * (index + 1)}%)`;
+                    })
                 }
                 document.addEventListener('scroll', parallaxScroll);
 
             }
         }
 
-        Parallax.init();
+        Parallax.init(1);
 
         // Appearable elements functionality
 

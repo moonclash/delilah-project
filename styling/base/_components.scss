@@ -323,4 +323,5 @@ body.modal-open {
 .de-parallax {
     @include position(relative);
     background-attachment: fixed;
+    overflow: hidden;
 }
