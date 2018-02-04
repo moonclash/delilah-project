@@ -81,7 +81,7 @@
 
 @mixin header($url) {
   @include background-image($url);
-  height: 50vh;
+  min-height: 50vh;
   text-align: center;
   @extend %flex-column;
   align-items: center;

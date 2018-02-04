@@ -172,7 +172,7 @@
             }
         }
 
-        Parallax.init(1);
+        Parallax.init(5);
 
         // Appearable elements functionality
 
