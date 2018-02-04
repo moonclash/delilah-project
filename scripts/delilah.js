@@ -132,22 +132,23 @@
 
         // Appearable elements functionality
 
-        function animateThis() {
-            const boxes = document.querySelectorAll('.de-appearable');
-            const mid = window.innerHeight / 2;
+        const Appearables = {
+            init() {
+                function animateThis() {
+                    const boxes = document.querySelectorAll('.de-appearable');
+                    const mid = window.innerHeight / 2;
 
-            function moveElement(element) {
-                if (element.getBoundingClientRect().top <= mid) {
-                    element.classList.add('appear');
+                    function moveElement(element) {
+                        if (element.getBoundingClientRect().top <= mid) {
+                            element.classList.add('appear');
+                        }
+                    }
+                    boxes.forEach(box => moveElement(box));
                 }
+
+                document.addEventListener('scroll', animateThis);
             }
-            boxes.forEach(box => moveElement(box));
         }
-
-        document.addEventListener('scroll', animateThis);
-
-
-
 
         // Appearable elements functionality
 
