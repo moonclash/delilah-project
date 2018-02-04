@@ -135,20 +135,23 @@
         const Appearables = {
             init() {
                 function animateThis() {
-                    const boxes = document.querySelectorAll('.de-appearable');
+                    const boxes = Elements.init('.de-appearable');
                     const mid = window.innerHeight / 2;
 
                     function moveElement(element) {
-                        if (element.getBoundingClientRect().top <= mid) {
-                            element.classList.add('appear');
+                        element = Element.init(element);
+                        if (element.getDimension('top') <= mid) {
+                            element.addClass('appear');
                         }
                     }
-                    boxes.forEach(box => moveElement(box));
+                    boxes.elements.forEach(box => moveElement(box));
                 }
 
                 document.addEventListener('scroll', animateThis);
             }
         }
+
+        Appearables.init();
 
         // Appearable elements functionality
 
