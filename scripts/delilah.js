@@ -73,6 +73,16 @@
             this.element.forEach(element => element.textContent = text);
         }
 
+        Elements.appearable = function() {
+            const screenMiddle = window.innerHeight / 2;
+            const top = this.element.getDimension('top');
+            
+            if (top <= screenMiddle) {
+                console.log(true);
+                this.appearable.addClass('appear');
+            }
+        }
+
 
         // Multiple elements functionality
 
@@ -135,28 +145,28 @@
           init(el) {
             this.appearable = Element.init(el);
             document.addEventListener('scroll', this.appear.bind(this));
+            return this;
           }
         }
 
         Appearable.appear = function() {
             const screenMiddle = window.innerHeight / 2;
             const top = this.appearable.getDimension('top');
+            
             if (top <= screenMiddle) {
+                console.log(true);
                 this.appearable.addClass('appear');
             }
         }
 
         // Appearable elements functionality
 
-        const h1Animate = Object.create(Appearable);
-        Appearable.init('.de-card');
+        // const h1Animate = Object.create(Appearable);
+        // Appearable.init('.de-card');
 
-
-        
-
-
-
-
+        const cards = Object.create(Elements);
+        cards.init('.de-card');
+        cards.appearable();
 
     });
 })();

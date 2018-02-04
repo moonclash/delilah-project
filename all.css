@@ -602,45 +602,45 @@ h3 {
   animation: 600ms de-twistAndShow ease-in-out forwards; }
 
 .de-flipAndShowDown {
-  animation: 400ms de-flipAndShowDown cubic-bezier(0.7, 0.8, 0.6, 0.4); }
+  animation: 400ms de-flipAndShowDown cubic-bezier(0.7, 0.8, 0.6, 0.4) forwards; }
 
 .de-fallRight {
   transform-origin: 0% 50%;
-  animation: 400ms de-fallRight ease-in-out; }
+  animation: 400ms de-fallRight ease-in-out forwards; }
 
 .de-fallLeft {
   transform-origin: 100% 50%;
-  animation: 400ms de-fallLeft ease-in-out; }
+  animation: 400ms de-fallLeft ease-in-out forwards; }
 
 .de-growAndShow {
-  animation: 400ms de-growAndShow ease; }
+  animation: 400ms de-growAndShow ease forwards; }
 
 .de-blurIn {
-  animation: 600ms de-blurIn cubic-bezier(0.6, 0.4, 0.3, 0.2); }
+  animation: 600ms de-blurIn cubic-bezier(0.6, 0.4, 0.3, 0.2) forwards; }
 
 .de-appearFromLeft {
   transform-origin: 0% 50%;
-  animation: 300ms de-appearFromLeft linear; }
+  animation: 300ms de-appearFromLeft linear forwards; }
 
 .de-appearFromRight {
   transform-origin: 100% 50%;
-  animation: 300ms de-appearFromRight linear; }
+  animation: 300ms de-appearFromRight linear forwards; }
 
 .de-scaleUpAndFadeIn {
-  animation: 500ms de-scaleUpAndFadeIn ease; }
+  animation: 500ms de-scaleUpAndFadeIn ease forwards; }
 
 .de-scaleDownAndFadeIn {
-  animation: 500ms de-scaleDownAndFadeIn ease; }
+  animation: 500ms de-scaleDownAndFadeIn ease forwards; }
 
 .de-flipXAndShow {
   transform-style: preserve-3d;
-  animation: 300ms de-flipXAndShow linear; }
+  animation: 300ms de-flipXAndShow linear forwards; }
 
 .de-wobbleIn {
-  animation: 600ms de-wobbleIn ease-in-out; }
+  animation: 600ms de-wobbleIn ease-in-out forwards; }
 
 .de-scaleY {
-  animation: 200ms de-scaleY ease-in-out; }
+  animation: 200ms de-scaleY ease-in-out forwards; }
 
 .de-blurAndshake {
   animation: 100ms de-blurAndshake linear 5 alternate; }
