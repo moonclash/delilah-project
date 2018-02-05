@@ -699,6 +699,16 @@ h3 {
     background: #d01f1f; }
     .de-btn.btn-alert:hover {
       background: #d92020; }
+  .de-btn.btn-secondary {
+    background: #8b8b8b; }
+    .de-btn.btn-secondary:hover {
+      background: #909090; }
+  .de-btn.btn-hero {
+    font-size: 32px;
+    padding: 10px 50px;
+    background: #018fd3; }
+    .de-btn.btn-hero:hover {
+      background: #0196dd; }
 
 input.de-input[type=text], .de-textarea, input.de-input[type=email] {
   border: none;

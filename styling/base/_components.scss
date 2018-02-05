@@ -32,6 +32,16 @@
     &.btn-alert {
         @include background-hover($red-500);
     }
+
+    &.btn-secondary {
+       @include background-hover($grey-300);
+    }
+
+    &.btn-hero {
+        font-size: $font-size-big;
+        padding: 10px 50px;
+        @include background-hover($blue-500);
+    }
 }
 
 input.de-input {
