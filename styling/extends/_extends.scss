@@ -82,6 +82,7 @@
 @mixin header($url) {
   @include background-image($url);
   min-height: 50vh;
+  height: 50vh; // IE
   text-align: center;
   @extend %flex-column;
   align-items: center;

@@ -1,7 +1,7 @@
 (function iife() {
     document.addEventListener('DOMContentLoaded', () => {
 
-        // single element functionality 
+        // Single element functionality 
 
         const Element = {
             init(domElement) {
@@ -56,8 +56,6 @@
             return nodes;
         }
 
-        // single element functionality 
-
 
         // Multiple elements functionality
 
@@ -79,8 +77,6 @@
         Elements.text = function(text) {
             this.elements.forEach(element => element.textContent = text);
         }
-
-        // Multiple elements functionality
 
 
         // Alert functionality
@@ -111,7 +107,6 @@
             body.removeClass('alert-open');
         }
 
-        // Alert functionality
 
         // Modal functionality
 
@@ -131,8 +126,6 @@
             const body = Element.init('body');
             body.removeClass('modal-open');
         }
-
-        // Modal functionality
 
 
         // Appearable elements functionality
@@ -156,6 +149,7 @@
             }
         }
 
+        // Parallax scroll
 
         const Parallax = {
             init(factor) {
@@ -168,14 +162,12 @@
                     })
                 }
                 document.addEventListener('scroll', parallaxScroll);
-
             }
         }
 
-        Parallax.init(5);
-
-        // Appearable elements functionality
-
+        const Scoller = {
+            
+        }
 
     });
 })();
