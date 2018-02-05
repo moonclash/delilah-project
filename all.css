@@ -937,6 +937,31 @@ body.modal-open .de-modal {
   background-attachment: fixed;
   overflow: hidden; }
 
+.de-form {
+  box-shadow: 7px 9px 24px 1px rgba(69, 69, 75, 0.2);
+  max-width: 500px;
+  padding: 5px 10px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: space-around; }
+  .de-form .form-group {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 5px 0; }
+    .de-form .form-group button {
+      align-self: center;
+      margin: 10px 0; }
+    .de-form .form-group label {
+      font-size: 12.30769px;
+      order: -1;
+      padding-bottom: 5px;
+      transition: 200ms transform ease-in-out; }
+    .de-form .form-group .de-input:focus ~ label {
+      transform: scale(0.9) translateY(2%); }
+
 .de-responsive-container, header {
   display: flex;
   flex-flow: column wrap; }

@@ -335,3 +335,28 @@ body.modal-open {
     background-attachment: fixed;
     overflow: hidden;
 }
+
+.de-form {
+    box-shadow: $element-shadow;
+    max-width: 500px;
+    padding: 5px 10px;
+    @include flexbox(column, center, space-around);
+
+    .form-group {
+        @include flexbox(column, flex-start, flex-start);
+        margin: 5px 0;
+        button {
+            align-self: center;
+            margin: 10px 0;
+        }
+        label {
+            font-size: $font-size-tiny;
+            order: -1;
+            padding-bottom: 5px;
+            transition: 200ms transform ease-in-out;
+        }
+        .de-input:focus ~ label {
+            transform: scale(.9) translateY(2%);
+        }
+    }
+}
