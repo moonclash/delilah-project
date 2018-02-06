@@ -7,6 +7,8 @@ and layout.
 
 ### Features
 
+#### Layout and pre-built components
+
 - Responsive container
 
 - A centered container with a default maximum width of `1200px` that scales down on smaller screens
@@ -19,6 +21,38 @@ and layout.
   
 - Typography
   - Pre-built typography that creates various font sizes, font rendering, line-heights and letter spacing
+  
+- Modal components
+
+- Accordion components
+
+- Card components
+ 
+- Alert components
+
+- Input elements
+
+- Form component
+
+- Responsive navigation bar component
+
+- Table components
+
+- Buttons
+
+
+#### JavaScript library
+
+Delilah comes with a micro JavaScript library, that powers some of the components. It also offers funcionality of defining
+different new components, or simply defining logic.
+
+
+#### Animation library
+
+Delilah comes with its own animation library.
+  
+
+
     
     
 
