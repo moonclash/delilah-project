@@ -9,9 +9,16 @@ and layout.
 
 - Responsive container
 
-  - A centered container with a default maximum width of `1200px` that scales down on smaller screens
+- A centered container with a default maximum width of `1200px` that scales down on smaller screens
 - Responsive 12 column grid
 
-  - 12 grid layout built with flexbox - choose the number of columns desired in a row and the framework distributes their sizes accordingly.
+- 12 grid responsive layout built with flexbox - choose the number of columns desired in a row and the framework distributes their sizes accordingly. The grid will adjust itself accordingly on different screen sizes
+  
+- Browser resets
+  - Every browser renders certain elements in its own way. To eliminate inconsistency between browsers, there is a normalize file that brings default browser styling to a consistent way
+  
+ - Typography
+  - Pre-built typography that creates various font sizes, font rendering, line-heights and letter spacing
+    
     
 
