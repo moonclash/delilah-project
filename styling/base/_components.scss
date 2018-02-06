@@ -48,7 +48,8 @@ input.de-input {
     &[type=text],
     &[type=email] {
         border: none;
-        box-shadow: 0 0 0 1px lighten($grey-500, 49%);
+        box-shadow: 0 0 0 1px lighten($grey-300, 32%);
+        border-radius: $element-radius;
         transition: 500ms all ease;
         padding: 7px 2px;
         &:focus {
