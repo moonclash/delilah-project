@@ -341,10 +341,14 @@ body.modal-open {
     max-width: 500px;
     padding: 5px 10px;
     @include flexbox(column, center, space-around);
+    background: lighten($grey-300, 43%);
 
     .form-group {
         @include flexbox(column, flex-start, flex-start);
         margin: 5px 0;
+        .de-input {
+            width: 100%;
+        }
         button {
             align-self: center;
             margin: 10px 0;
@@ -357,6 +361,14 @@ body.modal-open {
         }
         .de-input:focus ~ label {
             transform: scale(.9) translateY(2%);
+        }
+
+        &.check {
+            flex-direction: row;
+            label {
+                margin: 0 5px;
+                order: 0;
+            }
         }
     }
 }
