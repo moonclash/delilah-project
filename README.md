@@ -17,7 +17,7 @@ and layout.
 - Browser resets
   - Every browser renders certain elements in its own way. To eliminate inconsistency between browsers, there is a normalize file that brings default browser styling to a consistent way
   
- - Typography
+- Typography
   - Pre-built typography that creates various font sizes, font rendering, line-heights and letter spacing
     
     
