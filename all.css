@@ -712,7 +712,8 @@ h3 {
 
 input.de-input[type=text], .de-textarea, input.de-input[type=email] {
   border: none;
-  box-shadow: 0 0 0 1px #c3c3c7;
+  box-shadow: 0 0 0 1px #dddddd;
+  border-radius: 3px;
   transition: 500ms all ease;
   padding: 7px 2px; }
   input.de-input[type=text]:focus, .de-textarea:focus, input.de-input[type=email]:focus {
