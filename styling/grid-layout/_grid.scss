@@ -1,3 +1,5 @@
+
+
 // responsive container defaulted to a 1200px max width
 .de-responsive-container {
     @include responsive-container($screen-desktop); // rows for the container
@@ -14,3 +16,15 @@
         }
     } // sass script loop to create responsive sized columns on 12 grids
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.de-main-content {
+    flex: 1 0 auto;
+
+}
+

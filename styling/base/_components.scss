@@ -340,6 +340,7 @@ body.modal-open {
     box-shadow: $element-shadow;
     max-width: 500px;
     padding: 5px 10px;
+    margin-top: 10px;
     @include flexbox(column, center, space-around);
     background: lighten($grey-300, 43%);
 
@@ -371,4 +372,10 @@ body.modal-open {
             }
         }
     }
+}
+
+.de-footer {
+    background: lighten($blue-500, 50%);
+    flex-shrink: 0;
+
 }

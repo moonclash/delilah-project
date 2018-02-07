@@ -941,6 +941,7 @@ body.modal-open .de-modal {
   box-shadow: 7px 9px 24px 1px rgba(69, 69, 75, 0.2);
   max-width: 500px;
   padding: 5px 10px;
+  margin-top: 10px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -969,6 +970,10 @@ body.modal-open .de-modal {
       .de-form .form-group.check label {
         margin: 0 5px;
         order: 0; }
+
+.de-footer {
+  background: #d4f1ff;
+  flex-shrink: 0; }
 
 .de-responsive-container, header {
   display: flex;
@@ -1026,6 +1031,14 @@ body.modal-open .de-modal {
   .de-responsive-container .de-row .de-col-12 {
     flex: 1 0 8.33333%;
     padding: 10px 15px; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+
+.de-main-content {
+  flex: 1 0 auto; }
 
 header {
   background-image: url("http://unsplash.it/4500/2000");
