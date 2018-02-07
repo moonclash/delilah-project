@@ -423,7 +423,7 @@ h3 {
 
 .de-responsive-container .de-row {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row nowrap; }
 
 .de-alert, .de-modal {
   position: fixed;
@@ -981,7 +981,7 @@ body.modal-open .de-modal {
 
 .de-responsive-container .de-row {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row nowrap; }
 
 .de-alert, .de-modal {
   position: fixed;
