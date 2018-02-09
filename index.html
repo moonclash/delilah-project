@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
 	<link rel="stylesheet" href="all.css">
   <script src="https://use.fontawesome.com/fc4ee08908.js"></script>
 	<title>Delilah is testing</title>
@@ -33,6 +34,7 @@
       </div>
     </header>
     <div class="de-responsive-container">
+      <div id="mocha"></div>
       <div class="de-row">
         <div class="de-col-1">
           <form action="#" class="de-form">
@@ -114,8 +116,17 @@
           </div>
         </div>
       </footer>
-		<script type='text/javascript' src='scripts/delilah.js'>
-			
-		</script>
+
+		  <script src="https://cdn.rawgit.com/Automattic/expect.js/0.3.1/index.js"></script>
+      <script src="http://chaijs.com/chai.js"></script>
+      <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+      <script src="./scripts/delilah.js"></script>
+      <script>
+        mocha.setup('bdd');
+      </script>
+      <script src="test.js"></script>
+      <script>
+        mocha.run();
+      </script>
 </body>
 </html>

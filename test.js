@@ -1,13 +1,14 @@
-const assert = require('assert');
+const expect = chai.expect;
 
-function foo(a, b) {
-  return a + b;
-}
 
-describe('Calculator', function() {
-  describe('foo()', function(){
-    it('should add numbers', function() {
-      assert.equal(foo(1,2), 3);
-    })
+describe('Array', function() {
+    it('should return -1 when the value is not present', function() {
+      expect(1).to.equal(1);
+    });
+});
+
+describe('Element', function() {
+  it('should instantiate a single Element', function() {
+    expect(Element.init('header')).to.be.an('object');
   })
 })

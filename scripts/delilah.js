@@ -1,9 +1,4 @@
-(function iife() {
-    document.addEventListener('DOMContentLoaded', () => {
-
-        // Single element functionality 
-
-        const Element = {
+const Element = {
             init(domElement) {
                 if (typeof domElement == 'string') {
                     this.element = document.querySelector(domElement);
@@ -164,8 +159,3 @@
                 document.addEventListener('scroll', parallaxScroll);
             }
         }
-
-    });
-})();
-
-// select element
