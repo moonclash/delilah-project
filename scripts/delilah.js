@@ -1,9 +1,4 @@
-(function iife() {
-    document.addEventListener('DOMContentLoaded', () => {
-
-        // Single element functionality 
-
-        const Element = {
+const Element = {
             init(domElement) {
                 if (typeof domElement == 'string') {
                     this.element = document.querySelector(domElement);
@@ -25,8 +20,11 @@
         }
 
         Element.text = function(text) {
-            this.element.textContent = text;
-            return this;
+            if (text) {
+                this.element.textContent = text;
+                return this;
+            }
+            return this.element.textContent;
         }
 
         Element.addClass = function(className) {
@@ -164,8 +162,3 @@
                 document.addEventListener('scroll', parallaxScroll);
             }
         }
-
-    });
-})();
-
-// select element
