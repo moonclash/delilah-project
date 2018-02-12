@@ -20,8 +20,11 @@ const Element = {
         }
 
         Element.text = function(text) {
-            this.element.textContent = text;
-            return this;
+            if (text) {
+                this.element.textContent = text;
+                return this;
+            }
+            return this.element.textContent;
         }
 
         Element.addClass = function(className) {
