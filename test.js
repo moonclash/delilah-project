@@ -28,6 +28,16 @@ describe('Element', function() {
 });
 
 describe('Alert', function() {
-  const dAlert = Alert.init('hello', 'world');
-  dAlert.showAlert();
+  const dAlert = Alert.init();
+
+   it('should create an Alert instance', function() {
+    expect(dAlert).to.be.an('object');
+  });
+
+   it('should not add properties if no parameters provided', function() {
+    expect(dAlert.title).to.equal(undefined);
+  });
+
+
+
 });
