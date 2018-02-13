@@ -26,3 +26,8 @@ describe('Element', function() {
   });
 
 });
+
+describe('Alert', function() {
+  const dAlert = Alert.init('hello', 'world');
+  dAlert.showAlert();
+});

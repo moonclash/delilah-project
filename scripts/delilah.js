@@ -11,7 +11,7 @@ const Element = {
 
         Element.find = function(el) {
             const thisElement = Object.create(this);
-            return thisElement.init(this.element.querySelector(el))
+            return thisElement.init(this.element.querySelector(el));
         }
 
         Element.event = function(event, handler) {
@@ -94,8 +94,10 @@ const Element = {
         Alert.showAlert = function() {
             const body = Object.create(Element);
             body.init('body');
-            this.alertElement.find('.alert-header h3').text(this.title);
-            this.alertElement.find('.alert-body p').text(this.content);
+            if (this.title && this.content) {
+                this.alertElement.find('.alert-header h3').text(this.title);
+                this.alertElement.find('.alert-body p').text(this.content);
+            }
             body.addClass('alert-open');
 
         }
