@@ -27,6 +27,21 @@ describe('Element', function() {
 
 });
 
+describe('Multiple elements', function() {
+  const elements = Elements.init('li');
+  const domSelected = document.querySelectorAll('li');
+
+  it('should create an Elements instance', function() {
+    expect(elements).to.be.an('object');
+  });
+
+  it('should save the correct amount of elements', function() {
+    expect(elements.elements.length).to.equal(domSelected.length);
+  });
+
+  
+});
+
 describe('Alert', function() {
   const dAlert = Alert.init();
 
@@ -37,7 +52,5 @@ describe('Alert', function() {
    it('should not add properties if no parameters provided', function() {
     expect(dAlert.title).to.equal(undefined);
   });
-
-
 
 });
