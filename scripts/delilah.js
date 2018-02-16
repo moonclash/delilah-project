@@ -114,6 +114,7 @@ const Element = {
             init(modalId) {
                 this.modalElement = Element.init(modalId);
                 this.modalElement.find('button[data-toggle=close]').event('click', this.closeModal);
+                return this;
             }
         }
 

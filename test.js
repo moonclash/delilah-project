@@ -54,3 +54,9 @@ describe('Alert', function() {
   });
 
 });
+
+
+describe('Modal', function() {
+  const modal = Modal.init('#modal');
+  modal.openModal();
+});
