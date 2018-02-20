@@ -7,9 +7,8 @@
 
 
 header {
-	@include header('http://unsplash.it/4500/2000');
-  &:after {
-    display: inline-block;
-    transform: scale(50);
+	@include header('../styling/demo-images/business-man-bg.jpg');
+  h1 {
+    color: $white-500;
   }
 }
