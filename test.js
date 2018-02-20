@@ -58,5 +58,8 @@ describe('Alert', function() {
 
 describe('Modal', function() {
   const modal = Modal.init('#modal');
-  modal.openModal();
+
+  it('instantiate a Modal instance', function() {
+    expect(Object.getPrototypeOf(modal)).to.equal(Modal);
+  });
 });
