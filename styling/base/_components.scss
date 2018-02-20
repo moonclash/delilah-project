@@ -181,6 +181,8 @@ nav.de-nav {
     max-width: 500px;
     border-radius: $element-radius;
     transition: 700ms all ease;
+    min-height: 550px;
+    max-height: 550px;
     &:hover {
         cursor: pointer;
         box-shadow: 0 0 24px 1px transparentize($grey-500, .8);

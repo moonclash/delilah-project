@@ -806,7 +806,9 @@ nav.de-nav {
   box-shadow: 7px 9px 24px 1px rgba(69, 69, 75, 0.2);
   max-width: 500px;
   border-radius: 3px;
-  transition: 700ms all ease; }
+  transition: 700ms all ease;
+  min-height: 550px;
+  max-height: 550px; }
   .de-card:hover {
     cursor: pointer;
     box-shadow: 0 0 24px 1px rgba(69, 69, 75, 0.2);
