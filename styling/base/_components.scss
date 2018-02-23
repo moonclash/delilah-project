@@ -75,16 +75,19 @@ input.de-input {
 
     tr {
         border-bottom: 1px solid lighten($grey-500, 60%);
+        background: $white-500;
     }
 
     th,
     td {
         padding: 10px 25px;
+        text-align: center;
     }
     thead {}
 
     tbody {
         tr {
+
             &:last-child {
                 border: none;
             }
@@ -113,7 +116,7 @@ nav.de-nav {
     z-index: 1;
     transition: 250ms all ease;
     @include until($screen-mobile) {
-        transform: translateY(-66%);
+        transform: translateY(-74%);
     }
     background: $white-500;
     box-shadow: 0 5px 11px 0 transparentize($grey-500, .9);
@@ -182,7 +185,6 @@ nav.de-nav {
     border-radius: $element-radius;
     transition: 700ms all ease;
     min-height: 550px;
-    max-height: 550px;
     &:hover {
         cursor: pointer;
         box-shadow: 0 0 24px 1px transparentize($grey-500, .8);

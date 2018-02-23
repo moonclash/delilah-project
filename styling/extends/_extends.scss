@@ -2,7 +2,7 @@
 
 %flex-column {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
 }
 
 %flex-row {
@@ -89,6 +89,14 @@
   justify-content: center;
   .de-btn {
     margin: 50px 0;
+  }
+}
+
+
+@mixin font-size($font-size) {
+  font-size: $font-size;
+  @include until($screen-mobile) {
+    font-size: $font-size / 1.8;
   }
 }
 

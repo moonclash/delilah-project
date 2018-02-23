@@ -7,8 +7,69 @@
 
 
 header {
-	@include header('../styling/demo-images/business-man-bg.jpg');
-  h1 {
-    color: $white-500;
+    @include header('../styling/demo-images/business-man-bg.jpg');
+    h1 {
+        color: $white-500;
+    }
+}
+
+.intro-title {
+    text-align: center;
+}
+
+
+.de-card {
+    .card-header {
+      box-shadow: inset 0 0 0 500px transparentize($black-500, .5);
+      h4 {
+        color: $white-500;
+      }
+    }
+    &.analysis {
+        .card-header {
+            @include background-image('../styling/demo-images/analytics.jpg')
+        }
+    }
+
+    &.experts {
+        .card-header {
+            @include background-image('../styling/demo-images/experts.jpg')
+        }
+    }
+
+    &.customers {
+        .card-header {
+            @include background-image('../styling/demo-images/customers.jpg')
+        }
+    }
+}
+
+.goal  {
+  align-items: center;
+  justify-content: center;
+}
+
+.de-accordion {
+  img {
+    width: 100%;
+  }
+}
+
+.intro-row {
+  background: #c6e7f9;
+}
+
+.contact {
+  justify-content: center;
+  align-items: center;
+}
+
+.de-table {
+  max-width: 500px;
+}
+
+.contact {
+  form {
+    margin: 0 auto;
   }
 }

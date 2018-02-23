@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import '_variables';
+@import '../extends/_extends';
 
 html, body {
 	font-family: $base-font-family;
@@ -21,13 +22,14 @@ a {
 }
 
 h1 {
-	font-size: $font-size-large;
+	@include font-size($font-size-large);
 }
 
 h2 {
-	font-size: $font-size-big;
+	@include font-size($font-size-big);
 }
 
 h3 {
-	font-size: $font-size-small;
+	@include font-size($font-size-small);
 }
+

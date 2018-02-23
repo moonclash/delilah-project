@@ -6,7 +6,8 @@
     .de-row {
         @extend %flex-row;
         @include until($screen-mobile) {
-        	flex-flow: column wrap;
+        	flex-flow: column;
+            align-items: center;
         }
         @for $i from 1 through 12 {
             .de-col-#{$i} {
@@ -27,4 +28,3 @@ body {
     flex: 1 0 auto;
 
 }
-
